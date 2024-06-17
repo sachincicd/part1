@@ -1,5 +1,13 @@
 name: part2
-on: push
+on: 
+   push:
+   pull_request: 
+      types: 
+        - opened
+        - closed
+   workflow_dispatch: 
+   schedule:
+     - cron: "0 1 * * *"
 env:
   filename: elite.txt
 jobs:
