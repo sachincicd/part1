@@ -6,7 +6,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Create Artifact
-              run:  echo username  ${{ vars.username }} and password  ${{ secrets.PASSWORD}} > elite.txt
+              run:  echo "this is Part 1" > elite.txt
             - name: display artifact
               run: cat elite.txt
    
