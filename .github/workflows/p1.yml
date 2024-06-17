@@ -4,10 +4,13 @@ env:
   filename: elite.txt
 jobs:
     createart:
+        env:
+          project: part2 
         runs-on: ubuntu-latest
         steps:
+
             - name: Create Artifact
-              run:  echo username ${{ vars.username}} password ${{secrets.password}} > $filename
+              run:  echo username ${{ vars.username}} password ${{secrets.password}} for project $project > $filename
             - name: display artifact
               run: cat $filename
    
