@@ -1,12 +1,13 @@
-name: part1
+name: part2
 on: push
-
+env:
+  filename: elite.txt
 jobs:
     createart:
         runs-on: ubuntu-latest
         steps:
             - name: Create Artifact
-              run:  echo "this is Part 1" > elite.txt
+              run:  echo username ${{ vars.username}} password ${{secrets.password}} > $filename
             - name: display artifact
-              run: cat elite.txt
+              run: cat $filename
    
